@@ -22,6 +22,8 @@ const NavContent = () => {
           pathname === Item.route; // here includes is used to check if the route is a subroute of the current route means if the current route is /profile and the Item.route is /profile/1 then it will return true
         return (
           <SheetClose asChild key={Item.route}>
+            {" "}
+            {/* asChild is used to pass the SheetClose component as a child to the SheetTrigger component */}
             <Link
               href={Item.route}
               className={`${

@@ -26,7 +26,7 @@ const Theme = () => {
               height={20}
               className="active-theme"
             />
-          ) : (
+          ) : mode === "dark" ? (
             <Image
               src="/assets/icons/moon.svg"
               alt="moon"
@@ -34,9 +34,17 @@ const Theme = () => {
               height={20}
               className="active-theme"
             />
+          ) : (
+            <Image
+              src="/assets/icons/system.svg"
+              alt="moon"
+              width={20}
+              height={20}
+              className="active-theme"
+            />
           )}
         </MenubarTrigger>
-        <MenubarContent className="absolute right-[-3rem]  mt-3 min-w-[120px] rounded border py-2 dark:border-dark-400 dark:bg-dark-300 ">
+        <MenubarContent className="absolute right-[-3rem]  mt-3 min-w-[120px] rounded border bg-slate-50 py-2 dark:border-dark-400 dark:bg-dark-300 ">
           {themes.map((theme) => (
             <MenubarItem
               key={theme.value}
